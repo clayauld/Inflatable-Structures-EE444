@@ -1,0 +1,67 @@
+#include <msp430.h>
+#include <stdio.h>
+
+void main(void)
+{
+  IncrementVcore(); // Level 1 up to 12 MHz
+
+  UCSCTL1 = DCORSEL_5;       ///////////////////
+  UCSCTL2 = 304;             // Sets McLK and 
+  UCSCTL3 = SELREF_0;        // SMCLK to 10 MHZ
+  UCSCTL4 = SELM_3 | SELS_3; /////////////////
+
+  P11SEL |= BIT1 | BIT2; // Out put MCLK and SMCLK
+  P11DIR |= BIT1 | BIT2;
+
+  P3DIR |= BIT4 | BIT5; // Set Port 8 Pins 1,2 as outputs
+  P3SEL |= BIT4 | BIT5; // Pin4 = TX, Pin5 = RX
+
+  P5SEL |= BIT0 | BIT6 | BIT7; //Set Port 5, Pins 6 and 7 as USCI RX and TX
+  P5DIR |= BIT0; // to be measured
+
+  UCA0CTL1 |= UCSSEL_2 | UCSWRST;
+  UCA0BR0 = 5; // Set baudrate to 115200
+  UCA0BR1 = 0;
+  UCA0MCTL |= UCBRF_6 + UCBRS_6 + UCOS16; // oversampling mode
+  UCA0CTL1 &= ~UCSWRST; // Initialize USCI state machine
+  UCA0IE |= UCRXIE; // Enable USCI_A0 RX interrupt
+
+  UCA1CTL1 |= UCSSEL_2 | UCSWRST;
+  UCA1BR0 = 5; // Set baudrate to 115200
+  UCA1BR1 = 0;
+  UCA1MCTL |= UCBRF_6 + UCBRS_6 + UCOS16; // oversampling mode
+  UCA1CTL1 &= ~UCSWRST; // Initialize USCI state machine
+  UCA1IE |= UCRXIE; // Enable USCI_A0 RX interrupt
+
+  _EINT();
+  LPM0;
+}
+
+void USCI_A0_isr(void)__interrupt[USCI_A0_VECTOR]
+{
+  switch(UCA0IV)
+  {
+    case 0: break;
+    case 2:	
+      UCA0IE |= UCTXIE;
+      UCA1TXBUF = UCA0RXBUF;  //mirror the input
+      break;
+    case 4: break;
+    default: break;
+  }
+}
+
+void USCI_A1_isr(void)__interrupt[USCI_A1_VECTOR]
+{
+  switch(UCA1IV)
+  {
+    case 0: break;
+    case 2:	
+      UCA1IE |= UCTXIE;
+      UCA1TXBUF = UCA1RXBUF;  //mirror the input
+      UCA0RXBUF = UCA1RXBUF;
+      break;
+    case 4: break;
+    default: break;
+  }
+}

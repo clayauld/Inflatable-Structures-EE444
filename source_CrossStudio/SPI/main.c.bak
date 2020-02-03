@@ -1,0 +1,59 @@
+#include <msp430.h>
+extern int IncrementVcore(void);
+
+int button_possition = 0;
+
+void main(void)
+{
+  IncrementVcore();
+  IncrementVcore(); // Increment to level 2 so 20 MHz can be used
+
+  UCSCTL1 = DCORSEL_5; // Range of frequency of 20 MHz
+  UCSCTL2 = 609; // Set frequency to 20 MHz
+  UCSCTL3 = SELREF_0;
+  UCSCTL4 = SELS_3;
+
+  P2SEL |= BIT2;    // Setup Port 2 pin 2 to special function (SMCLK)
+  P2DIR |= BIT2;    // Set Port 2 pin 2 to output SMCLK
+
+  P2SEL |= BIT7; // Setup output pins
+  P2DIR |= BIT7;  // Set direction out so information hits transceiver
+  P3SEL |= BIT3 | BIT4 | BIT5 | BIT6;
+  P3DIR |= BIT3 | BIT4 | BIT5 | BIT6;
+    // 3.3 UCA0TXD/ UCA0SIMO
+    // 3.4 UCA0RXD/ UCA0SOMI
+    // 3.5 Chip Select CSN
+    // 3.6 CE control
+    // 2.7 clock
+
+
+  // Setup SPI //
+  UCA0CTL1 |= UCSWRST; // Puts state machine to rest
+  UCA0CTL0 |= UCCKPL | UCMSB | UCMST | UCSYNC; // Clock polarity is high | Most Significant bit | 8 bit by default | Master mode | 3 pin mode by default | synchronous mode
+  UCA0CTL1 |= UCSSEL_2; // Select SMCLK as source
+  UCA0BR0 = 0x02;
+  UCA0BR1 = 0;
+  UCA0CTL1 &= ~UCSWRST;
+
+  // TX mode PWR_up = 1, PRIM_RX = 0,CE = 1
+  // Write command and status registers command word 001A AAAA
+  // Hex address 00, " 00001010 "
+
+  _EINT();
+  LPM0;
+}
+
+spi_cmd_(char * string, int length)
+{
+  unsigned int i;
+  for(i=0; i<length; i++)
+  {
+    while(!(UCA1IFG & UCTXIFG));
+    UCB0TXBUF = string[i];
+  }
+}
+
+void CE_LOW(void)
+{
+ P3OUT &= ~BIT6; // P4.2 LOW
+}

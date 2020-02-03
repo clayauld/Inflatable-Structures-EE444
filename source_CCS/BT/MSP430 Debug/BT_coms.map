@@ -1,0 +1,31 @@
+
+SYMBOLS BY NAME
+
+    5cee CODE       _IncrementVcore     
+    5c00 ISR        _USCI_A0_isr        
+    5c2a ISR        _USCI_A1_isr        
+    1c00            ___RAM_Address      
+    4000            ___RAM_Size         
+       0            ___begin_IDATA0     
+       0            ___begin_UDATA0     
+       0            ___end_IDATA0       
+       0            ___end_UDATA0       
+    5c6e CODE       _main               
+    5d90 CODE       _memcpy             
+    5da0 CODE       _memset             
+
+
+SYMBOLS BY VALUE
+
+       0            ___begin_IDATA0     
+       0            ___begin_UDATA0     
+       0            ___end_IDATA0       
+       0            ___end_UDATA0       
+    1c00            ___RAM_Address      
+    4000            ___RAM_Size         
+    5c00 ISR        _USCI_A0_isr        
+    5c2a ISR        _USCI_A1_isr        
+    5c6e CODE       _main               
+    5cee CODE       _IncrementVcore     
+    5d90 CODE       _memcpy             
+    5da0 CODE       _memset             

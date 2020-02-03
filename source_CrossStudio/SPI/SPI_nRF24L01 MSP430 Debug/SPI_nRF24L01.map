@@ -1,0 +1,41 @@
+
+SYMBOLS BY NAME
+
+    4442 CODE       _IncrementVcore     
+    44e4 CODE       _LP_init            
+    4530 CODE       _SPI_init           
+    454e CODE       _SPI_pins_init      
+    2400            ___RAM_Address      
+    2000            ___RAM_Size         
+       0            ___begin_IDATA0     
+       0            ___begin_THREAD     
+       0            ___begin_UDATA0     
+       0            ___end_IDATA0       
+       0            ___end_THREAD       
+       0            ___end_UDATA0       
+    4414 CODE       _main               
+    4576 CODE       _memcpy             
+    4586 CODE       _memset             
+    4414 CONST      thread_init_begin   
+    4414 CONST      thread_init_end     
+
+
+SYMBOLS BY VALUE
+
+       0            ___begin_UDATA0     
+       0            ___begin_THREAD     
+       0            ___begin_IDATA0     
+       0            ___end_UDATA0       
+       0            ___end_THREAD       
+       0            ___end_IDATA0       
+    2000            ___RAM_Size         
+    2400            ___RAM_Address      
+    4414 CONST      thread_init_begin   
+    4414 CONST      thread_init_end     
+    4414 CODE       _main               
+    4442 CODE       _IncrementVcore     
+    44e4 CODE       _LP_init            
+    4530 CODE       _SPI_init           
+    454e CODE       _SPI_pins_init      
+    4576 CODE       _memcpy             
+    4586 CODE       _memset             

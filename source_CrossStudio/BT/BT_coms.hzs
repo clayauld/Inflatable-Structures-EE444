@@ -1,0 +1,84 @@
+<!DOCTYPE CrossStudio_Session_File>
+<session>
+ <Bookmarks/>
+ <Breakpoints>
+  <BreakpointListItem line="37" action="" hardwareBreakpoint="" trigger="" useHWbreakpoint="false" group="Breakpoints" type="Breakpoint" state="4" counter="0" isFunctionBreakpoint="false" filename="main.c" expression="" />
+ </Breakpoints>
+ <EEMRegistersWindow>
+  <EEMRegisters moduleClockControl="40f" generalClockControl="2e" />
+ </EEMRegistersWindow>
+ <EEMStateStorageWindow>
+  <EEMStateStorage control="2" />
+ </EEMStateStorageWindow>
+ <EEMTriggerSequencerWindow>
+  <EEMTriggers seqnxtstate0="65535" seqnxtstate1="65535" seq_ctl="7" seqaction="" />
+ </EEMTriggerSequencerWindow>
+ <EEMTriggersWindow/>
+ <ExecutionProfileWindow/>
+ <FrameBufferWindow>
+  <FrameBufferWindow addressText="" bufferWidth="-1" bufferHeight="-1" addressSpace="" />
+ </FrameBufferWindow>
+ <Memory1>
+  <MemoryWindow autoEvaluate="0" addressText="" addressOrder="0" refreshPeriod="0" columnsText="" sizeText="" viewMode="0" dataSize="1" radix="16" name="BT_coms" addressSpace="" />
+ </Memory1>
+ <Memory2>
+  <MemoryWindow autoEvaluate="0" addressText="" addressOrder="0" refreshPeriod="0" columnsText="" sizeText="" viewMode="0" dataSize="1" radix="16" name="BT_coms" addressSpace="" />
+ </Memory2>
+ <Memory3>
+  <MemoryWindow autoEvaluate="0" addressText="" addressOrder="0" refreshPeriod="0" columnsText="" sizeText="" viewMode="0" dataSize="1" radix="16" name="BT_coms" addressSpace="" />
+ </Memory3>
+ <Memory4>
+  <MemoryWindow autoEvaluate="0" addressText="" addressOrder="0" refreshPeriod="0" columnsText="" sizeText="" viewMode="0" dataSize="1" radix="16" name="BT_coms" addressSpace="" />
+ </Memory4>
+ <Project>
+  <ProjectSessionItem path="BT_coms" name="unnamed" />
+  <ProjectSessionItem path="BT_coms;BT_coms" name="unnamed" />
+  <ProjectSessionItem path="BT_coms;BT_coms;Source Files" name="unnamed" />
+ </Project>
+ <Register1>
+  <RegisterWindow openNodes="ADC12_A;PMM/PMMCTL0;P6" binaryNodes="" unsignedNodes="" decimalNodes="" octalNodes="" asciiNodes="" visibleNodes="ADC12_A/ADC12CTL0;ADC12_A/ADC12CTL1;ADC12_A/ADC12CTL2;ADC12_A/ADC12IFG;ADC12_A/ADC12IE;ADC12_A/ADC12IV;ADC12_A/ADC12MCTL0;ADC12_A/ADC12MCTL1;ADC12_A/ADC12MCTL2;ADC12_A/ADC12MCTL3;ADC12_A/ADC12MCTL4;ADC12_A/ADC12MCTL5;ADC12_A/ADC12MCTL6;ADC12_A/ADC12MCTL7;ADC12_A/ADC12MCTL8;ADC12_A/ADC12MCTL9;ADC12_A/ADC12MCTL10;ADC12_A/ADC12MCTL11;ADC12_A/ADC12MCTL12;ADC12_A/ADC12MCTL13;ADC12_A/ADC12MCTL14;ADC12_A/ADC12MCTL15;ADC12_A/ADC12MEM0;ADC12_A/ADC12MEM1;ADC12_A/ADC12MEM2;ADC12_A/ADC12MEM3;ADC12_A/ADC12MEM4;ADC12_A/ADC12MEM5;ADC12_A/ADC12MEM6;ADC12_A/ADC12MEM7;ADC12_A/ADC12MEM8;ADC12_A/ADC12MEM9;ADC12_A/ADC12MEM10;ADC12_A/ADC12MEM11;ADC12_A/ADC12MEM12;ADC12_A/ADC12MEM13;ADC12_A/ADC12MEM14;ADC12_A/ADC12MEM15;PMM/PMMCTL0;PMM/PMMCTL1;PMM/SVSMHCTL;PMM/SVSMLCTL;PMM/SVSMIO;PMM/PMMIFG;PMM/PMMRIE;PMM/PM5CTL0;P6/P6IN;P6/P6OUT;P6/P6DIR;P6/P6REN;P6/P6DS;P6/P6SEL" name="BT_coms" />
+ </Register1>
+ <Register2>
+  <RegisterWindow openNodes="CPU Registers" binaryNodes="" unsignedNodes="" decimalNodes="" octalNodes="" asciiNodes="" visibleNodes="" name="BT_coms" />
+ </Register2>
+ <Register3>
+  <RegisterWindow openNodes="CPU Registers" binaryNodes="" unsignedNodes="" decimalNodes="" octalNodes="" asciiNodes="" visibleNodes="" name="BT_coms" />
+ </Register3>
+ <Register4>
+  <RegisterWindow openNodes="CPU Registers" binaryNodes="" unsignedNodes="" decimalNodes="" octalNodes="" asciiNodes="" visibleNodes="" name="BT_coms" />
+ </Register4>
+ <TargetWindow programAction="" uploadFileType="" programLoadAddress="" programSize="" uploadFileName="" uploadMemoryInterface="" programFileName="" uploadStartAddress="" programFileType="" uploadSize="" programMemoryInterface="" />
+ <TraceWindow>
+  <Trace enabled="Yes" />
+ </TraceWindow>
+ <Watch1>
+  <Watches active="1" update="Never" >
+   <Watchpoint evalMode="0" linenumber="116" numelements="0" radix="11" name="ADC12MEM0" list="" expression="ADC12MEM0" filename="../../../../../../../../../dewilliams4/Documents/CrossWorks Projects/EE 444 Project/BT/main.c" />
+   <Watchpoint evalMode="2" linenumber="13" numelements="4" radix="16" name="buffer" list="" expression="buffer" filename="../../../../../../../../../dewilliams4/Documents/CrossWorks Projects/EE 444 Project/BT/main.c" />
+   <Watchpoint evalMode="0" linenumber="116" numelements="0" radix="11" name="volts_raw" list="" expression="volts_raw" filename="../../../../../../../../../dewilliams4/Documents/CrossWorks Projects/EE 444 Project/BT/main.c" />
+   <Watchpoint evalMode="2" linenumber="18" numelements="4" radix="-1" name="the_buffer" list="" expression="the_buffer" filename="../../../../../../../../../dewilliams4/Documents/CrossWorks Projects/EE 444 Project/BT/cmd_functions.c" />
+   <Watchpoint evalMode="2" linenumber="130" numelements="35" radix="-1" name="string" list="" expression="string" filename="../../../../../../../../../dewilliams4/Documents/CrossWorks Projects/EE 444 Project/BT/main.c" />
+   <Watchpoint evalMode="0" linenumber="131" numelements="0" radix="11" name="volts_calibrated" list="" expression="volts_calibrated" filename="../../../../../../../../../dewilliams4/Documents/CrossWorks Projects/EE 444 Project/BT/main.c" />
+   <Watchpoint evalMode="0" linenumber="131" numelements="0" radix="11" name="CAL_ADC2_5VREF_FACTOR" list="" expression="CAL_ADC2_5VREF_FACTOR" filename="../../../../../../../../../dewilliams4/Documents/CrossWorks Projects/EE 444 Project/BT/main.c" />
+   <Watchpoint evalMode="0" linenumber="131" numelements="0" radix="11" name="CAL_ADC_GAIN_FACTOR" list="" expression="CAL_ADC_GAIN_FACTOR" filename="../../../../../../../../../dewilliams4/Documents/CrossWorks Projects/EE 444 Project/BT/main.c" />
+   <Watchpoint evalMode="0" linenumber="131" numelements="0" radix="-1" name="CAL_ADC_OFFSET" list="" expression="CAL_ADC_OFFSET" filename="../../../../../../../../../dewilliams4/Documents/CrossWorks Projects/EE 444 Project/BT/main.c" />
+   <Watchpoint evalMode="0" linenumber="41" numelements="0" radix="-1" name="TA1CTL" list="" expression="TA1CTL" filename="../../../../../../../../../dewilliams4/Documents/CrossWorks Projects/EE 444 Project/BT/cmd_functions.c" />
+   <Watchpoint evalMode="0" linenumber="12" numelements="0" radix="-1" name="start" list="" expression="start" filename="../../../../../../../../../dewilliams4/Documents/CrossWorks Projects/EE 444 Project/BT/main.c" />
+  </Watches>
+ </Watch1>
+ <Watch2>
+  <Watches active="0" update="Never" />
+ </Watch2>
+ <Watch3>
+  <Watches active="0" update="Never" />
+ </Watch3>
+ <Watch4>
+  <Watches active="0" update="Never" />
+ </Watch4>
+ <Files>
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="init_setups.c" y="67" path="init_setups.c" left="0" selected="0" name="unnamed" top="102" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="cmd_functions.c" y="62" path="cmd_functions.c" left="0" selected="0" name="unnamed" top="51" />
+  <SessionOpenFile useTextEdit="1" useBinaryEdit="0" codecName="Default" x="0" debugPath="main.c" y="0" path="main.c" left="0" selected="1" name="unnamed" top="216" />
+ </Files>
+ <MSP430CrossStudioWindow activeProject="BT_coms" autoConnectTarget="MSP-EXP430F5529LP" debugSearchFileMap="" fileDialogInitialDirectory="/Users/clayauld/Downloads/BT" fileDialogDefaultFilter="*.c" autoConnectCapabilities="528255" debugSearchPath="" buildConfiguration="MSP430 Debug" />
+</session>
